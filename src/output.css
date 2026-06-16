@@ -15,6 +15,7 @@
     --color-lime-100: oklch(96.7% 0.067 122.328);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -330,6 +331,9 @@
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
@@ -586,6 +590,9 @@
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
@@ -606,6 +613,13 @@
   }
   .gap-\[80px\] {
     gap: 80px;
+  }
+  .space-y-3 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+    }
   }
   .space-y-4 {
     :where(& > :not(:last-child)) {
@@ -718,8 +732,14 @@
   .border-red-500 {
     border-color: var(--color-red-500);
   }
+  .bg-\[\#0B1E43\] {
+    background-color: #0B1E43;
+  }
   .bg-\[\#0B132A\] {
     background-color: #0B132A;
+  }
+  .bg-\[\#0B265A\] {
+    background-color: #0B265A;
   }
   .bg-\[\#FF6A28\] {
     background-color: #FF6A28;
@@ -933,6 +953,9 @@
   }
   .text-\[white\] {
     color: white;
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
   }
   .text-white {
     color: var(--color-white);
